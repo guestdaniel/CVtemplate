@@ -1,0 +1,121 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{apa/global/}
+    \entry{Name2020}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=7539a073f1d9064a3c4976d6c9c5d6aa}{%
+           family={Name},
+           family_i={N\bibinitperiod},
+           given={Your},
+           given_i={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=1d5a69f9fd7a5080a7f632e953a11b26}{%
+           family={Assistant},
+           family_i={A\bibinitperiod},
+           given={Undergraduate},
+           given_i={U\bibinitperiod}}}%
+        {{uniquename=0,hash=3262483f5ec66c59cea831cbe5bd2fe0}{%
+           prefix={von},
+           prefix_i={v\bibinitperiod},
+           family={Flugelhorn},
+           family_i={F\bibinitperiod},
+           given={Georg},
+           given_i={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{179d2d1599d8f1b3c7bc27f57c4f881e}
+      \strng{fullhash}{f4aa3be42ae9ec94b109281223aa1d9c}
+      \field{sortinit}{N}
+      \field{sortinithash}{a52ecf374d1aa02cdea5f29be4dad56c}
+      \field{labelyear}{2020}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of American Weavers}
+      \field{number}{3}
+      \field{title}{Recycled materials are non-viable in intensive aquatic applications}
+      \field{volume}{47}
+      \field{year}{2020}
+      \field{pages}{910\bibrangedash 920}
+      \range{pages}{11}
+    \endentry
+    \entry{Name2019}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=7539a073f1d9064a3c4976d6c9c5d6aa}{%
+           family={Name},
+           family_i={N\bibinitperiod},
+           given={Your},
+           given_i={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=e88cc7e6782c611a89e1df5061388e47}{%
+           family={Hao},
+           family_i={H\bibinitperiod},
+           given={Liu},
+           given_i={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8db0c58b89398254811891f60d8f2da7}
+      \strng{fullhash}{8db0c58b89398254811891f60d8f2da7}
+      \field{sortinit}{N}
+      \field{sortinithash}{a52ecf374d1aa02cdea5f29be4dad56c}
+      \field{labelyear}{2019}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Looms}
+      \field{number}{10}
+      \field{title}{A compostable loom design for mass production}
+      \field{volume}{102}
+      \field{year}{2019}
+      \field{pages}{1503\bibrangedash 1520}
+      \range{pages}{18}
+    \endentry
+    \entry{Name2021}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=7539a073f1d9064a3c4976d6c9c5d6aa}{%
+           family={Name},
+           family_i={N\bibinitperiod},
+           given={Your},
+           given_i={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=3262483f5ec66c59cea831cbe5bd2fe0}{%
+           prefix={von},
+           prefix_i={v\bibinitperiod},
+           family={Flugelhorn},
+           family_i={F\bibinitperiod},
+           given={Georg},
+           given_i={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{960f8afbd71f81ad2bc22337f473763f}
+      \strng{fullhash}{960f8afbd71f81ad2bc22337f473763f}
+      \field{sortinit}{N}
+      \field{sortinithash}{a52ecf374d1aa02cdea5f29be4dad56c}
+      \field{labelyear}{2023}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{4}
+      \field{journaltitle}{International Journal of Weaving}
+      \field{title}{Modern polymer wefts in aquatic application}
+      \field{volume}{79}
+      \field{year}{2023}
+      \field{pages}{777\bibrangedash 790}
+      \range{pages}{14}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

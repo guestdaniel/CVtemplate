@@ -1,0 +1,228 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% cv.tex
+% CV template
+% Created by Daniel Guest
+% Modified from template by...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{newpxtext}
+\pagestyle{plain}
+\pagenumbering{arabic}
+% Language stuff
+\usepackage[american]{babel}
+% Bibliography stuff
+\usepackage[backend=biber,
+			style=apa,
+			sortcites=true,
+			hyperref=true,
+			language=american]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{bibliography.bib}
+
+% Support making author name bold in bibliography automatically
+% Sourced from... 
+	% https://tex.stackexchange.com/questions/253388/author-highlighting-with-biblatex-apa
+	% https://tex.stackexchange.com/questions/274436/highlight-an-author-in-bibliography-using-biblatex-allowing-bibliography-style-t
+	% https://tex.stackexchange.com/questions/73136/make-specific-author-bold-using-biblatex 
+\usepackage{xpatch}
+
+\newbibmacro*{name:bold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\newcommand*{\boldnames}{}
+
+\xpretobibmacro{name:apa:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:apa:family-given}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+\renewcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}
+  {{7539a073f1d9064a3c4976d6c9c5d6aa}}
+
+% Define some indentation amounts for following environments
+\newlength{\step}
+\setlength{\step}{2em}
+\newlength{\twostep}
+\setlength{\twostep}{4em}
+\newlength{\aligngroupinlen}
+
+% Command to format two pieces of text, one left aligned and one right aligned
+\newcommand{\aligngroup}[2]
+{\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+		#1 &
+		#2 \\
+\end{tabular*}}
+
+% Command to format two pieces of text, one left aligned and one right aligned, with a bit of indentation on the left
+% Horribly ugly way to do it but it works... should improve
+\newcommand{\aligngroupin}[2]
+{\setlength{\aligngroupinlen}{\linewidth}\addtolength{\aligngroupinlen}{-\step}\hspace*{\step}\begin{tabular*}{\aligngroupinlen}{@{}l@{\extracolsep{\fill}}r@{}}
+		#1 &
+		#2 \\
+\end{tabular*}}
+
+% indentsection environment, used to control indentation within sections 
+\newenvironment{indentsection}%
+	{\begin{list}%
+			{}%
+			{\setlength{\leftmargin}{\step}%
+			 \setlength{\parsep}{\parskip}%
+			 \setlength{\itemsep}{0pt}%
+			}%
+			\item[]%
+	}%
+	{\end{list}}%
+
+% hangingpar environment, used to create hanging indent for bibliography
+\newenvironment{hangingpar}%
+	{\begin{list}%
+			{}%
+			{\setlength{\itemindent}{-\step}%
+			 \setlength{\leftmargin}{\twostep}%
+			 \setlength{\itemsep}{0pt}%
+			 \setlength{\parsep}{\parskip}%
+			 }%
+			\setlength{\parindent}{-\step}%
+			\item[]%
+	}%
+	{\end{list}
+	 \vspace{0.25em}}%
+   
+\begin{document}
+
+% BEGIN TITLE
+\begin{center}
+{\LARGE \textbf{Your Name}}
+
+123 Main Street \ \textbullet \ \
+Apt 999 \ \textbullet \ \
+Anytown, KS \ \textbullet \ \
++1 (111) 222-3333
+
+name@uom.edu \ \textbullet \ \ 
+www.yourname.com
+\end{center}
+% END TITLE
+\hrule
+% BEGIN EDUCATION
+\subsection*{Education}
+\begin{indentsection}
+		\aligngroup
+			{\textbf{University of Somewhere}}
+			{\textbf{Anytown, KS}}
+		\aligngroupin
+			{Ph.D. Underwater Basket Weaving}
+			{2017 -- 2022}
+		\aligngroup
+			{\textbf{The University of Another Place}}
+			{\textbf{Somewhere Else, CA}}
+		\aligngroupin
+			{B.S. Land Basket Weaving}
+			{2013 -- 2017}
+\end{indentsection}
+% END EDUCATION
+\hrule
+% BEGIN AWARDS
+\subsection*{Awards, Scholarships, and Honors}
+\begin{indentsection}
+	\aligngroup
+		{\textbf{University of Somewhere, College of Basket Weaving}}
+		{}
+	\aligngroupin
+		{College of Basket Weaving Graduate Fellowship}
+		{2017 -- 2022}
+	\aligngroup
+		{\textbf{The University of Another Place}}
+		{}
+	\aligngroupin
+		{Summa Cum Laude}
+		{2017}
+	\aligngroupin
+		{Dean's List}
+		{2013 -- 2017}
+	\aligngroup
+		{\textbf{The University of Another Place, School of Basket Weaving}}
+		{}
+	\aligngroupin
+		{Weaving Honors}
+		{2017}
+	\aligngroupin
+		{Student Leadership Award}
+		{2017}
+\end{indentsection}
+% END AWARDS
+\hrule
+% BEGIN RESEARCH
+\subsection*{Research Experience}
+\begin{indentsection}
+	\aligngroup
+		{\textbf{Weft Research Lab}}
+		{\textbf{Anytown, KS}}
+	\aligngroupin
+		{Graduate Research Assistant, advised by Georg von Flugelhorn}
+		{2017 -- 2022}
+	\aligngroup
+		{\textbf{Loom Design Lab}}
+		{\textbf{Another Place, CA}}
+	\aligngroupin
+		{Undergraduate Research Assistant, advised by Liu Hao}
+		{2015 -- 2017}
+\end{indentsection}
+% END RESEARCH
+\hrule
+% BEGIN PUBLICATIONS
+\subsection*{Publications and Presentations}
+
+\begin{hangingpar}
+		\fullcite{Name2021}
+
+		\fullcite{Name2020}
+	
+		\fullcite{Name2019}
+\end{hangingpar}
+% END PUBLICATIONS
+\hrule
+% BEGIN WORK/VOLUNTEER
+\subsection*{Work and Volunteer Experience}
+\begin{indentsection}
+	\aligngroup
+		{\textbf{Weaving International}}
+		{\textbf{Another Place, CA}}
+	\aligngroupin
+		{Private Weaver}
+		{2015 -- 2017}
+	\aligngroup
+		{\textbf{University of Somewhere League of United Weavers}}
+		{\textbf{Anytown, KS}}
+	\aligngroupin
+		{Volunteer Weaving Instructor}
+		{2017 -- 2020}
+	\aligngroupin
+		{President}
+		{2020 -- 2021}
+\end{indentsection}
+% END WORK/VOLUNTEER
+\hrule
+% BEGIN SKILLS
+\subsection*{Skills and Technical Experience}
+\begin{hangingpar}
+	\textbf{Document preparation:} \LaTeX{}, Microsoft Office
+		
+	\textbf{General computer skills:} GNU Core Utilities, git, Linux, Windows
+
+	\textbf{Mathematics:} Differential equations and non-linear dynamics, linear algebra, multivariable calculus, real and complex analysis
+
+	\textbf{Programming languages:} Cobol, Fortran
+\end{hangingpar}
+% END SKILLS
+\hrule
+\end{document}
+
+
