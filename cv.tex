@@ -3,6 +3,7 @@
 % CV template
 % Created by Daniel Guest
 % Modified from template by...
+	% Can't find the link --- if anyone finds it, let me know!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[10pt,letterpaper]{article}
@@ -17,36 +18,57 @@
 \usepackage[backend=biber,
 			style=apa,
 			sortcites=true,
-			hyperref=true,
 			language=american]{biblatex}
 \DeclareLanguageMapping{american}{american-apa}
 \addbibresource{bibliography.bib}
 
-% Support making author name bold in bibliography automatically
+%-------------------------------------------------------------
+% Make Your Name bold in \printbibliography and \fullcite{...}
 % Sourced from... 
 	% https://tex.stackexchange.com/questions/253388/author-highlighting-with-biblatex-apa
 	% https://tex.stackexchange.com/questions/274436/highlight-an-author-in-bibliography-using-biblatex-allowing-bibliography-style-t
 	% https://tex.stackexchange.com/questions/73136/make-specific-author-bold-using-biblatex 
+% Instructions:
+%	1) Note that the code below is specific to biblatex-apa! If you
+%		prefer to use a different type of bibliography style, you
+%		need to examine the above links and modify it appropriately.
+%	2) Add your papers/presentations to bibliography.bib, or replace
+%		bibliography.bib with your own bib resource above.
+%	3) Compile this document. For Linux users, using latexmk is
+%		best. It will likely require multiple latex/biber calls.
+%		For Windows/Mac users, or those who feel uncomfortable
+%		with command line, you may want to try a LaTeX IDE which
+%		compiles documents automatically.
+%	4) Once it has compiled successfully, look in the file "cv.bbl"
+%	5) In the .bbl file, each author name should be associated
+%		with a unique hash. Find your hash and replace the hash
+%		below with yours.
+%-------------------------------------------------------------
+
 \usepackage{xpatch}
 
 \newbibmacro*{name:bold}[2]{%
   \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\listbreak}{}}%
   \dolistloop{\boldnames}%
 }
-
 \newcommand*{\boldnames}{}
 
 \xpretobibmacro{name:apa:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
 \xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
-
 \xapptobibmacro{name:apa:family-given}{\endgroup}{}{}
 \xapptobibmacro{name:delim}{\endgroup}{}{}
 
 \renewcommand*{\boldnames}{}
 \forcsvlist{\listadd\boldnames}
-  {{7539a073f1d9064a3c4976d6c9c5d6aa}}
+  {{7539a073f1d9064a3c4976d6c9c5d6aa}} % <---- HASH GOES HERE
 
-% Define some indentation amounts for following environments
+%-------------------------------------------------------------
+% Length and environment definitions
+%-------------------------------------------------------------
+
+% Define some indentation amounts for the environments
+% Changing \step (default 2em) and \twostep (default 4em) controls
+% indentation depth!
 \newlength{\step}
 \setlength{\step}{2em}
 \newlength{\twostep}
@@ -116,13 +138,13 @@ www.yourname.com
 \begin{indentsection}
 		\aligngroup
 			{\textbf{University of Somewhere}}
-			{\textbf{Anytown, KS}}
+			{Anytown, KS}
 		\aligngroupin
 			{Ph.D. Underwater Basket Weaving}
 			{2017 -- 2022}
 		\aligngroup
 			{\textbf{The University of Another Place}}
-			{\textbf{Somewhere Else, CA}}
+			{Somewhere Else, CA}
 		\aligngroupin
 			{B.S. Land Basket Weaving}
 			{2013 -- 2017}
@@ -164,13 +186,13 @@ www.yourname.com
 \begin{indentsection}
 	\aligngroup
 		{\textbf{Weft Research Lab}}
-		{\textbf{Anytown, KS}}
+		{Anytown, KS}
 	\aligngroupin
 		{Graduate Research Assistant, advised by Georg von Flugelhorn}
 		{2017 -- 2022}
 	\aligngroup
 		{\textbf{Loom Design Lab}}
-		{\textbf{Another Place, CA}}
+		{Another Place, CA}
 	\aligngroupin
 		{Undergraduate Research Assistant, advised by Liu Hao}
 		{2015 -- 2017}
@@ -181,6 +203,8 @@ www.yourname.com
 \subsection*{Publications and Presentations}
 
 \begin{hangingpar}
+		\fullcite{Person2022}
+
 		\fullcite{Name2021}
 
 		\fullcite{Name2020}
@@ -194,13 +218,13 @@ www.yourname.com
 \begin{indentsection}
 	\aligngroup
 		{\textbf{Weaving International}}
-		{\textbf{Another Place, CA}}
+		{Another Place, CA}
 	\aligngroupin
 		{Private Weaver}
 		{2015 -- 2017}
 	\aligngroup
 		{\textbf{University of Somewhere League of United Weavers}}
-		{\textbf{Anytown, KS}}
+		{Anytown, KS}
 	\aligngroupin
 		{Volunteer Weaving Instructor}
 		{2017 -- 2020}
@@ -214,12 +238,12 @@ www.yourname.com
 \subsection*{Skills and Technical Experience}
 \begin{hangingpar}
 	\textbf{Document preparation:} \LaTeX{}, Microsoft Office
-		
-	\textbf{General computer skills:} GNU Core Utilities, git, Linux, Windows
 
-	\textbf{Mathematics:} Differential equations and non-linear dynamics, linear algebra, multivariable calculus, real and complex analysis
+	\textbf{Mathematics:} Differential equations, game theory, linear algebra, real
 
 	\textbf{Programming languages:} Cobol, Fortran
+
+	\textbf{Software skills:} Digital Weft 3.0, Microsoft Loom
 \end{hangingpar}
 % END SKILLS
 \hrule

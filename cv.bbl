@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.7 $
+% $ biblatex bbl format version 2.8 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -23,28 +23,29 @@
       \name{author}{3}{}{%
         {{uniquename=0,hash=7539a073f1d9064a3c4976d6c9c5d6aa}{%
            family={Name},
-           family_i={N\bibinitperiod},
+           familyi={N\bibinitperiod},
            given={Your},
-           given_i={Y\bibinitperiod}}}%
+           giveni={Y\bibinitperiod}}}%
         {{uniquename=0,hash=1d5a69f9fd7a5080a7f632e953a11b26}{%
            family={Assistant},
-           family_i={A\bibinitperiod},
+           familyi={A\bibinitperiod},
            given={Undergraduate},
-           given_i={U\bibinitperiod}}}%
-        {{uniquename=0,hash=3262483f5ec66c59cea831cbe5bd2fe0}{%
-           prefix={von},
-           prefix_i={v\bibinitperiod},
+           giveni={U\bibinitperiod}}}%
+        {{uniquename=0,hash=f117edff864d5c0f5f7addde11978f3f}{%
            family={Flugelhorn},
-           family_i={F\bibinitperiod},
+           familyi={F\bibinitperiod},
            given={Georg},
-           given_i={G\bibinitperiod}}}%
+           giveni={G\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
       }
       \strng{namehash}{179d2d1599d8f1b3c7bc27f57c4f881e}
-      \strng{fullhash}{f4aa3be42ae9ec94b109281223aa1d9c}
+      \strng{fullhash}{c97b9319cfaf3118d14206d85fe98332}
+      \strng{authornamehash}{179d2d1599d8f1b3c7bc27f57c4f881e}
+      \strng{authorfullhash}{c97b9319cfaf3118d14206d85fe98332}
       \field{sortinit}{N}
-      \field{sortinithash}{a52ecf374d1aa02cdea5f29be4dad56c}
-      \field{labelyear}{2020}
-      \field{datelabelsource}{year}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of American Weavers}
@@ -59,21 +60,22 @@
       \name{author}{2}{}{%
         {{uniquename=0,hash=7539a073f1d9064a3c4976d6c9c5d6aa}{%
            family={Name},
-           family_i={N\bibinitperiod},
+           familyi={N\bibinitperiod},
            given={Your},
-           given_i={Y\bibinitperiod}}}%
+           giveni={Y\bibinitperiod}}}%
         {{uniquename=0,hash=e88cc7e6782c611a89e1df5061388e47}{%
            family={Hao},
-           family_i={H\bibinitperiod},
+           familyi={H\bibinitperiod},
            given={Liu},
-           given_i={L\bibinitperiod}}}%
+           giveni={L\bibinitperiod}}}%
       }
       \strng{namehash}{8db0c58b89398254811891f60d8f2da7}
       \strng{fullhash}{8db0c58b89398254811891f60d8f2da7}
+      \strng{authornamehash}{8db0c58b89398254811891f60d8f2da7}
+      \strng{authorfullhash}{8db0c58b89398254811891f60d8f2da7}
       \field{sortinit}{N}
-      \field{sortinithash}{a52ecf374d1aa02cdea5f29be4dad56c}
-      \field{labelyear}{2019}
-      \field{datelabelsource}{year}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Looms}
@@ -88,32 +90,71 @@
       \name{author}{2}{}{%
         {{uniquename=0,hash=7539a073f1d9064a3c4976d6c9c5d6aa}{%
            family={Name},
-           family_i={N\bibinitperiod},
+           familyi={N\bibinitperiod},
            given={Your},
-           given_i={Y\bibinitperiod}}}%
-        {{uniquename=0,hash=3262483f5ec66c59cea831cbe5bd2fe0}{%
-           prefix={von},
-           prefix_i={v\bibinitperiod},
+           giveni={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=f117edff864d5c0f5f7addde11978f3f}{%
            family={Flugelhorn},
-           family_i={F\bibinitperiod},
+           familyi={F\bibinitperiod},
            given={Georg},
-           given_i={G\bibinitperiod}}}%
+           giveni={G\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
       }
-      \strng{namehash}{960f8afbd71f81ad2bc22337f473763f}
-      \strng{fullhash}{960f8afbd71f81ad2bc22337f473763f}
+      \strng{namehash}{c766c69c903d4f00d0017edcc98064b7}
+      \strng{fullhash}{c766c69c903d4f00d0017edcc98064b7}
+      \strng{authornamehash}{c766c69c903d4f00d0017edcc98064b7}
+      \strng{authorfullhash}{c766c69c903d4f00d0017edcc98064b7}
       \field{sortinit}{N}
-      \field{sortinithash}{a52ecf374d1aa02cdea5f29be4dad56c}
-      \field{labelyear}{2023}
-      \field{datelabelsource}{year}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{4}
       \field{journaltitle}{International Journal of Weaving}
       \field{title}{Modern polymer wefts in aquatic application}
       \field{volume}{79}
-      \field{year}{2023}
+      \field{year}{2021}
       \field{pages}{777\bibrangedash 790}
       \range{pages}{14}
+    \endentry
+    \entry{Person2022}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=1acbe6a10c805e0eddbd05c0a456e5e5}{%
+           family={Person},
+           familyi={P\bibinitperiod},
+           given={Another},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=7539a073f1d9064a3c4976d6c9c5d6aa}{%
+           family={Name},
+           familyi={N\bibinitperiod},
+           given={Your},
+           giveni={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=f117edff864d5c0f5f7addde11978f3f}{%
+           family={Flugelhorn},
+           familyi={F\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{62076f5cef4284268992d58d0a3f6a0f}
+      \strng{fullhash}{eb291aa48c38a2c873524315f2265a29}
+      \strng{authornamehash}{62076f5cef4284268992d58d0a3f6a0f}
+      \strng{authorfullhash}{eb291aa48c38a2c873524315f2265a29}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{1}
+      \field{journaltitle}{Journal of Statistical Weaving}
+      \field{title}{Mixed effects models for examining individual differences in weaving technique}
+      \field{volume}{25}
+      \field{year}{2022}
+      \field{pages}{209\bibrangedash 220}
+      \range{pages}{12}
     \endentry
   \endsortlist
 \endrefsection
